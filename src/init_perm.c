@@ -69,10 +69,10 @@ char		*init_perm(struct stat st, char *path)
 	perm_usr(str, st);
 	perm_grp(str, st);
 	perm_oth(str, st);
-	count = listxattr(path, NULL, 256, XATTR_NOFOLLOW);
+	count = listxattr(path, NULL, 256);
 	if (count > 0 && count < 200)
 		str[10] = '@';
-	else if ((acl = acl_get_file(path, ACL_TYPE_EXTENDED)))
+	else if ((acl = acl_get_file(path, ACL_TYPE_ACCESS)))
 		str[10] = '+';
 	else
 		str[10] = '\0';

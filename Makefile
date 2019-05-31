@@ -43,7 +43,7 @@ all: $(NAME)
 
 $(NAME):
 	@make -C libft
-	@$(CC) $(SRC) -I$(INC) -I$(INC_LIBFT) libft/libft.a -o $(NAME)
+	@$(CC) $(SRC) -I$(INC) -I$(INC_LIBFT) libft/libft.a -o $(NAME) -lacl
 
 $(OBJ)%.o: $(SRC)%.c
 	@$(CC) -I$(INC) -o $@ -c $<

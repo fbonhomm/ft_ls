@@ -19,6 +19,7 @@
 # include <stdlib.h>
 # include <sys/wait.h>
 # include <sys/types.h>
+# include <sys/sysmacros.h>
 # include <signal.h>
 # include <dirent.h>
 # include <ctype.h>
