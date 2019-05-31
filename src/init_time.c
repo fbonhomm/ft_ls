@@ -24,11 +24,7 @@ void		init_time(t_tree *node, struct stat st)
 	char	*str;
 	char	**tab;
 	time_t	present;
-	int		i;
-	int		j;
-
-	i = 0;
-	j = 0;
+	
 	present = time(NULL);
 	node->year = NULL;
 	str = ctime(&st.st_mtime);
